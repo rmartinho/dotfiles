@@ -1,0 +1,9 @@
+[user]
+	email = martinho.fernandes@gmail.com
+	name = Martinho Fernandes
+[push]
+	default = simple
+[mergetool "fugitive"]
+	cmd = gvim -f -c \"Gdiff\" \"$MERGED\"
+[merge]
+	tool = fugitive

@@ -1,0 +1,3 @@
+[extensions]
+prompt = ~/.hgext/hg-prompt/prompt.py
+
