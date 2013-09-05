@@ -7,3 +7,5 @@
 	cmd = gvim -f -c \"Gdiff\" \"$MERGED\"
 [merge]
 	tool = fugitive
+[core]
+	excludesfile = ~/.gitignore
