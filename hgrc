@@ -1,3 +1,6 @@
+[ui]
+username = Martinho Fernandes <martinho.fernandes@gmail.com>
+
 [extensions]
 prompt = ~/.hgext/hg-prompt/prompt.py
 
