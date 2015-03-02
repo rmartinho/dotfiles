@@ -1,0 +1,12 @@
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+export BASHRC_PATH=~/.dot/bash/rc
+export BASH_COMPLETION_DIR=~/.dot/bash/completion
+export BASH_PROMPT_DIR=~/.dot/bash/prompt
+
+for file in $BASHRC_PATH/*.sh; do
+  source "$file"
+done
+
+# vim:set ft=sh:

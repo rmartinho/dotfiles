@@ -1,0 +1,8 @@
+#!/bin/sh
+
+File=$1
+Package=$2
+shift 2
+
+echo $Package $* >> /etc/portage/package.license/$File
+

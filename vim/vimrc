@@ -1,0 +1,35 @@
+scriptencoding utf-8
+set nocompatible
+
+" remove all autocommands
+autocmd!
+
+" local variables and runtime path
+let s:this_path     = expand('<sfile>:p:h')
+let s:runtime_path  = s:this_path
+let s:bundle_path   = s:this_path . '/bundle'
+let s:rc_path       = s:this_path . '/rc'
+let &runtimepath    = s:runtime_path . ',' . &runtimepath
+let g:vimball_home  = s:runtime_path
+
+let $RMF_VIM_PATH    = s:this_path
+let $RMF_VIMRC       = s:rc_path
+let $RMF_BUNDLE_PATH = s:bundle_path
+
+" Vundle
+set runtimepath+=$RMF_BUNDLE_PATH/vundle
+call vundle#rc(s:bundle_path)
+
+let &runtimepath   .= ',' . s:runtime_path . '/after'
+
+" Load vimrc bits
+let s:rc_files = split(glob(s:rc_path.'/*.vim'), '\n')
+for rc_file in s:rc_files
+    exec 'source '.rc_file
+    unlet rc_file
+endfor
+
+" Secure local vimrcs
+set secure
+
+" vim: set ff=unix ft=vim fenc=utf-8:

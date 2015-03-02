@@ -1,0 +1,5 @@
+function screenPrompt() {
+  if [ -n "$STY" ]; then
+    echo "$SCREEN_PROMPT_PREFIX$SCREEN_PROMPT_SOCKET$STY$ResetColor$SCREEN_PROMPT_SEPARATOR$SCREEN_PROMPT_WINDOW$WINDOW$ResetColor$SCREEN_PROMPT_SUFFIX"
+  fi
+}
