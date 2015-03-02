@@ -9,3 +9,5 @@
 	tool = fugitive
 [core]
 	excludesfile = ~/.gitignore
+[github]
+	user = rmartinho
