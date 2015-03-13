@@ -11,3 +11,5 @@ ln -sf ~/.dot/tmux/tmux.conf ~/.tmux.conf
 ln -sf ~/.dot/vim/bootstrap.vim ~/.vimrc
 ln -sf ~/.dot/vim ~/.vim
 ln -sf ~/.dot/ssh/rc ~/.ssh/rc
+ln -sf ~/.dot/ssh/config ~/.ssh/config
+

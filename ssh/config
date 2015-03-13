@@ -1,0 +1,5 @@
+CheckHostIP yes
+HashKnownHosts yes
+VerifyHostKeyDNS yes
+VisualHostKey yes
+
