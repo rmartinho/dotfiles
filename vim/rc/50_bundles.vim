@@ -1,34 +1,38 @@
-Bundle 'gmarik/vundle'
+call vundle#begin($RMF_BUNDLE_PATH)
 
-Bundle 'tpope/vim-abolish'
-Bundle 'tpope/vim-characterize'
-Bundle 'tpope/vim-commentary'
-Bundle 'tpope/vim-dispatch'
-Bundle 'tpope/vim-eunuch'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-obsession'
-Bundle 'tpope/vim-repeat'
-Bundle 'tpope/vim-rhubarb'
-Bundle 'tpope/vim-surround'
+Plugin 'gmarik/vundle'
 
-Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim'}
+Plugin 'tpope/vim-abolish'
+Plugin 'tpope/vim-characterize'
+Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-dispatch'
+Plugin 'tpope/vim-eunuch'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-obsession'
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-rhubarb'
+Plugin 'tpope/vim-surround'
 
-Bundle 'flazz/vim-colorschemes'
+Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim'}
 
-Bundle 'altercation/vim-colors-solarized'
+Plugin 'flazz/vim-colorschemes'
 
-Bundle 'scrooloose/nerdtree'
+Plugin 'altercation/vim-colors-solarized'
 
-Bundle 'mattn/webapi-vim'
-Bundle 'mattn/gist-vim'
+Plugin 'scrooloose/nerdtree'
 
-Bundle 'wting/rust.vim'
+Plugin 'mattn/webapi-vim'
+Plugin 'mattn/gist-vim'
 
-Bundle 'rmartinho/vim-cpp11'
-Bundle 'rmartinho/vim-go'
-Bundle 'rmartinho/vim-proto'
-Bundle 'rmartinho/vim-jekyll'
-Bundle 'rmartinho/vim-boo'
+Plugin 'wting/rust.vim'
+
+Plugin 'rmartinho/vim-cpp11'
+Plugin 'rmartinho/vim-go'
+Plugin 'rmartinho/vim-proto'
+Plugin 'rmartinho/vim-jekyll'
+Plugin 'rmartinho/vim-boo'
+
+call vundle#end()
 
 " force reloading ftdetects
 filetype off

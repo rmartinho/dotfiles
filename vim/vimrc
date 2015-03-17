@@ -18,7 +18,6 @@ let $RMF_BUNDLE_PATH = s:bundle_path
 
 " Vundle
 set runtimepath+=$RMF_BUNDLE_PATH/vundle
-call vundle#rc(s:bundle_path)
 
 let &runtimepath   .= ',' . s:runtime_path . '/after'
 
