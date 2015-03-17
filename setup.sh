@@ -32,6 +32,7 @@ echo Setting up Powerline...
 ln -sf ~/.vim/bundle/powerline ~/.powerline
 ln -sf ~/.dot/powerline ~/.config/powerline
 ln -sf ~/.powerline/scripts/powerline-render ~/.local/bin/powerline-render
+ln -sf ~/.powerline/scripts/powerline-config ~/.local/bin/powerline-config
 
 echo Setup complete.
 
