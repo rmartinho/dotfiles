@@ -1,5 +1,7 @@
 #!/bin/bash
 
+DOT_DIR=`dirname $0`
+
 echo Creating directories...
 mkdir -p ~/.gnupg
 mkdir -p ~/.ssh
@@ -8,29 +10,31 @@ mkdir -p ~/.local/bin
 mkdir -p ~/.config
 
 echo Creating symlinks...
-ln -sf ~/.dot/bash/bashrc ~/.bashrc
-ln -sf ~/.dot/ghci/ghci ~/.ghci
-ln -sf ~/.dot/git/gitconfig ~/.gitconfig
-ln -sf ~/.dot/git/gitignore ~/.gitignore
-ln -sf ~/.dot/gpg/gpg-agent.conf ~/.gnupg/gpg-agent.conf
-ln -sf ~/.dot/gpg/gpg.conf ~/.gnupg/gpg.conf
-ln -sf ~/.dot/hg/hgrc ~/.hgrc
-ln -sf ~/.dot/tmux/tmux.conf ~/.tmux.conf
-ln -sf ~/.dot/vim/bootstrap.vim ~/.vimrc
-ln -sf ~/.dot/vim ~/.vim
-ln -sf ~/.dot/ssh/rc ~/.ssh/rc
-ln -sf ~/.dot/ssh/config ~/.ssh/config
+ln -sf $DOT_DIR/bash/bashrc ~/.bashrc
+ln -sf $DOT_DIR/ghci/ghci ~/.ghci
+ln -sf $DOT_DIR/git/gitconfig ~/.gitconfig
+ln -sf $DOT_DIR/git/gitignore ~/.gitignore
+ln -sf $DOT_DIR/gpg/gpg-agent.conf ~/.gnupg/gpg-agent.conf
+ln -sf $DOT_DIR/gpg/gpg.conf ~/.gnupg/gpg.conf
+ln -sf $DOT_DIR/hg/hgrc ~/.hgrc
+ln -sf $DOT_DIR/tmux/tmux.conf ~/.tmux.conf
+ln -sf $DOT_DIR/vim/bootstrap.vim ~/.vimrc
+ln -sf $DOT_DIR/vim ~/.vim
+ln -sf $DOT_DIR/ssh/rc ~/.ssh/rc
+ln -sf $DOT_DIR/ssh/config ~/.ssh/config
+
+echo Obtaining external dependencies...
+git -C $DOT_DIR submodule init
+git -C $DOT_DIR submodule update
+hg clone https://bitbucket.org/sjl/hg-prompt .hgext/hg-prompt
+pip install --user psutil
 
 echo Installing vim plugins...
 vim +PluginInstall +qall
 
-echo Obtaining external dependencies...
-hg clone https://bitbucket.org/sjl/hg-prompt .hgext/hg-prompt
-pip install --user psutil
-
 echo Setting up Powerline...
 ln -sf ~/.vim/bundle/powerline ~/.powerline
-ln -sf ~/.dot/powerline ~/.config/powerline
+ln -sf $DOT_DIR/powerline ~/.config/powerline
 ln -sf ~/.powerline/scripts/powerline-render ~/.local/bin/powerline-render
 ln -sf ~/.powerline/scripts/powerline-config ~/.local/bin/powerline-config
 
