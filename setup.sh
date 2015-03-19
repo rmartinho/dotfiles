@@ -26,8 +26,7 @@ ln -sf $DOT_DIR/ssh/rc ~/.ssh/rc
 ln -sf $DOT_DIR/ssh/config ~/.ssh/config
 
 echo Obtaining external dependencies...
-git -C $DOT_DIR submodule init
-git -C $DOT_DIR submodule update
+git -C $DOT_DIR submodule update --init
 hg clone https://bitbucket.org/sjl/hg-prompt .hgext/hg-prompt
 pip install --user psutil
 
