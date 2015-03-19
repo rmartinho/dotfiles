@@ -1,6 +1,8 @@
 #!/bin/bash
 
-DOT_DIR=`dirname $0`
+pushd `dirname $0` >/dev/null
+DOT_DIR=`pwd`
+popd >/dev/null
 
 echo Creating directories...
 mkdir -p ~/.gnupg
