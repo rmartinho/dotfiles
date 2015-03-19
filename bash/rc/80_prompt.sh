@@ -93,3 +93,4 @@ if [ -n "$DEMO" ]; then
 else
   PROMPT_COMMAND=setPrompt
 fi
+export PS1
