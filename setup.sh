@@ -24,6 +24,7 @@ ln -sf $DOT_DIR/vim/bootstrap.vim ~/.vimrc
 ln -sf $DOT_DIR/vim ~/.vim
 ln -sf $DOT_DIR/ssh/rc ~/.ssh/rc
 ln -sf $DOT_DIR/ssh/config ~/.ssh/config
+ln -sf $DOT_DIR/X/Xmodmap ~/.Xmodmap
 
 echo Obtaining external dependencies...
 git -C $DOT_DIR submodule update --init

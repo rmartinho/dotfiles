@@ -23,7 +23,7 @@ set guioptions=eR
 if has("gui_win32")
     set guifont=Consolas:h11
 else
-    set guifont=Ubuntu\ Mono\ derivative\ Powerline\ 13
+    set guifont=DejaVu\ Sans\ Mono\ 13
 endif
 
 autocmd GUIEnter * set lines=45 columns=135
