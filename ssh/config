@@ -3,3 +3,9 @@ HashKnownHosts yes
 VerifyHostKeyDNS yes
 VisualHostKey yes
 
+Host manwe
+  HostName manwe.rmf.io
+  Port 3992
+  User rmf
+
+# vim:ts=2:sw=2:sts=2:
