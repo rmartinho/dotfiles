@@ -1,13 +1,29 @@
-[user]
-	email = martinho.fernandes@gmail.com
-	name = Martinho Fernandes
-[push]
-	default = simple
-[mergetool "fugitive"]
-	cmd = gvim -f -c \"Gdiff\" \"$MERGED\"
-[merge]
-	tool = fugitive
 [core]
-	excludesfile = ~/.gitignore
+    excludesfile = ~/.gitignore
+[user]
+    email = rmf@rmf.io
+    name = Martinho Fernandes
+    signingkey = rmf@rmf.io
 [github]
-	user = rmartinho
+    user = rmartinho
+[push]
+    default = simple
+[pull]
+    ff = only
+[commit]
+    gpgsign = true
+[rebase]
+    autosquash = true
+    missingcommitscheck = error
+[status]
+    submodulesummary = true
+[log]
+    abbrevcommit = true
+    decorate = true
+[format]
+    pretty = format:%C(yellow)%h %Cblue%>(25)%ai %Cgreen%<(30)%aN %C(auto)%G?%Creset%<(16)%GK%C(auto)%d %Creset%s
+[mergetool "fugitive"]
+    cmd = gvim -f -c \"Gdiff\" \"$MERGED\"
+[merge]
+    tool = fugitive
+    ff = false
